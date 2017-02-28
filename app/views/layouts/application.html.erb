@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ticketing Setup</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-toggleable-sm navbar-inverse navbar_bg mb-3">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand pb-2" href="#">Customer Support</a>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+        <% if current_user.present? %>
+            <ul class="navbar-nav">
+                <% if current_user.user_type == "customer"%>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/tickets/my">My Tickets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/create_ticket">Create Ticket</a>
+                    </li>
+                <% else %>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/tickets/pending">Pending Tickets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/tickets/all">Closed Tickets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/tickets/closed">Closed Tickets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/tickets/answerd_byme">My Response</a>
+                    </li>
+                <% end %>
+                
+            </ul>        
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                	<%= link_to('Logout', destroy_user_session_path, :method => :delete, :class=>"nav-link") %> 
+                </li>
+            </ul>
+       	<% end %>
+    </div>
+</nav>
+<div class="container">	
+	<%= yield %>
+</div>
+</body>
+</html>

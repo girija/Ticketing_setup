@@ -1,0 +1,9 @@
+Mon, 20 Feb 2017 13:50:09 +0000
+README.rdoc	Mon, 20 Feb 2017 05:40:45 +0000
+app/controllers/application_controller.rb	Mon, 20 Feb 2017 05:40:45 +0000
+app/controllers/home_controller.rb	Mon, 20 Feb 2017 07:59:56 +0000
+app/helpers/application_helper.rb	Mon, 20 Feb 2017 05:40:45 +0000
+app/helpers/home_helper.rb	Mon, 20 Feb 2017 07:59:57 +0000
+app/models/ability.rb	Mon, 20 Feb 2017 13:36:27 +0000
+app/models/ticket.rb	Mon, 20 Feb 2017 13:45:40 +0000
+app/models/user.rb	Mon, 20 Feb 2017 13:26:09 +0000

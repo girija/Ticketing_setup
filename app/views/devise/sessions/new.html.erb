@@ -1,0 +1,36 @@
+<header>
+    <h1>Login Form <span>For Customer Support</span></h1>
+</header>
+<section>       
+  <div id="container_demo" >
+    <div id="wrapper">
+      <div id="login" class="animate form">
+         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <h1>Log in</h1> 
+          <p> 
+            <label for="username" class="uname" data-icon="u" > Your email</label>
+            <%= f.email_field :email, autofocus: true, :placeholder=>"Email" ,:required=>"required" %>          
+          </p>
+          <p> 
+            <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+            <%= f.password_field :password, autocomplete: "off", :placeholder=>"Password",:required=>"required" %>
+          </p>
+          <p class="keeplogin"> 
+            <%= f.check_box :remember_me %>
+            <label for="loginkeeping">Keep me logged in</label>
+          </p>
+          <p class="login button"> 
+            <input type="submit" value="Login" /> 
+          </p>
+          <p>
+            <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+          </p>
+          <p class="change_link">
+            Not a member yet ?          
+            <%= link_to "Join us", new_registration_path(resource_name), :class=>"to_register" %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>  
+</section>

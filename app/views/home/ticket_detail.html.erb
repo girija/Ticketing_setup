@@ -1,0 +1,25 @@
+<header>
+    <h1><%= @ticket.subject%></h1>
+</header>
+<section>
+	<div id="container_demo" >
+        <div id="wrapper" style="width:100%;">
+			<div id="login" style="width:100%;">
+				<div class="col-md-12" style="text-align:left;">
+					<div>
+					  <p class="lead">
+					  	<%= @ticket.message %>
+					  </p>
+					</div>
+					<div class="cb"></div>
+					<%= render partial: "template", locals: {commentable: @ticket, new_comment: @comment} %>  
+					<% if current_user.user_type == "agent" %>
+						<div class="comment_section">
+
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

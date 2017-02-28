@@ -1,0 +1,37 @@
+<header>
+  <h1>Registration Form <span>For Customer Support</span></h1>
+</header>
+<section>       
+  <div id="container_demo" >
+    <div id="wrapper">
+      <div id="register" class="animate form">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <h1> Sign up </h1> 
+          <p> 
+            <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+            <%= f.email_field :email, autofocus: true, :required=>"required", :placeholder=>"Email" %>
+          </p>
+          <p> 
+            <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", :required=>"required",:placeholder=>"Password" %>
+          </p>
+          <p> 
+            <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+            <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder=>"Confirm your password" %>
+          </p>
+          <p class="signin button"> 
+            <%= f.submit "Sign up" %>
+          </p>
+          <p class="change_link">  
+            Already a member ?
+            <a href="/" class="to_register"> Go and log in </a>
+          </p>
+        <% end %>
+      </div>
+    </div> 
+  </div> 
+</section>
