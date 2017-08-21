@@ -14,6 +14,7 @@ class HomeController < ApplicationController
         @tickets = Ticket.where(:status => "closed")
       elsif @t_type == "answerd_byme"
         @t_type = "Responded by me"
+        @tickets = Ticket.where(:status => "closed")
       end
     end
   end
