@@ -77,8 +77,8 @@ url(/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype');
 	font-stretch: normal;
 	unicode-range: U+001D-F002;
 }
-html,body{font-family: 'Roboto'; width:100%; margin:0px; padding:0px; font-size:14px; background:rgba(246, 246, 246, 0.95);min-height: 100%;-webkit-transition: padding 0.5s;-moz-transition: padding 0.5s; -ms-transition: padding 0.5s; -o-transition: padding 0.5s; transition: padding 0.5s;}
-html,body{background-color:rgba(246, 246, 246, 0.95) !important;}
+html,body{font-family: 'Roboto'; width:100%; margin:0px; padding:0px; font-size:14px; background:rgba(246, 246, 246, 0.95);-webkit-transition: padding 0.5s;-moz-transition: padding 0.5s; -ms-transition: padding 0.5s; -o-transition: padding 0.5s; transition: padding 0.5s;}
+html,body{min-height:700px;background-color:rgba(246, 246, 246, 0.95) !important;height:auto;}
 html, body, div, span, table, tr, td, th, a, input, select, text-area{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 *, *:before, *:after {-webkit-box-sizing:inherit; -moz-box-sizing:inherit; box-sizing:inherit;}
 a, a:hover, a:active, a:focus {outline:none;}
@@ -88,7 +88,7 @@ ul,ol,li{margin:0px; padding:0px;}
 #container_demo{
 	 text-align: left;
 	 margin: 0;
-	 padding: 0;
+	 padding: 10px;
 	 margin: 0 auto;
 	 font-family: "Roboto";
 }
@@ -109,7 +109,6 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 html,body {
 	margin:0;
 	padding:0;
-	height: 100%;
 }
 table {
 	border-collapse:collapse;
@@ -156,7 +155,7 @@ a{
 }
 .container{
 	width: 100%;
-	height: 100%;
+	min-height: 100% !important;
 	position: relative;
 	text-align: center;
 }
@@ -177,7 +176,7 @@ a{
 	line-height: 35px;
 	position: relative;
 	font-weight: 400;
-	color: rgba(26,89,120,0.9);
+	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     padding: 0px 0px 5px 0px;
 }
@@ -439,7 +438,7 @@ p.change_link{
 /** Styling both forms **/
 #register, 
 #login{
-	position: absolute;
+	/*position: absolute;*/
 	top: 0px;
 	width: 88%;	
 	padding: 18px 6% 60px 6%;

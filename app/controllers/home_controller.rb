@@ -9,9 +9,11 @@ class HomeController < ApplicationController
       if @t_type == "my"
         @tickets = current_user.tickets
       elsif @t_type == "pending"
-        @tickets = Ticket.find_by_status("new")
+        @tickets = Ticket.where(:status => "new")
       elsif @t_type == "closed"
-        @tickets = Ticket.find_by_status("closed")
+        @tickets = Ticket.where(:status => "closed")
+      elsif @t_type == "answerd_byme"
+        @t_type = "Responded by me"
       end
     end
   end
