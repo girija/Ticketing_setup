@@ -24,9 +24,12 @@ default: &default
   host: 172.30.201.110
   database: ticketing_system
   username: postgres
-  password: 
+  password: password
   pool: 5
   port: 5432
 
+development:
+  <<: *default
+  
 production:
   <<: *default
