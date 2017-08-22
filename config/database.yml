@@ -8,53 +8,13 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
-<<<<<<< HEAD
-development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-=======
-# development:
-#   adapter: mysql2
-#   encoding: utf8
-#   reconnect: false
-#   database: ticketing_system
-#   pool: 5
-#   host: localhost
-#   username: root
-#   password: password
 
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  host: 10.130.11.12
->>>>>>> ccd6d7fafa622ac8ada72d336912b5b797a8b40c
-  database: ticketing_system
-  pool: 5
-  host: localhost
-  username: root
-  password: password
-
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   host: 172.30.201.110
-#   database: ticketing_system
-#   username: postgres
-#   password: password
-#   pool: 5
-#   port: 5432
-
-# development:
-#   <<: *default
-  
-<<<<<<< HEAD
-# production:
-#   <<: *default
-=======
-test:
-  <<: *default  
- 
-production:
-  <<: *default
->>>>>>> ccd6d7fafa622ac8ada72d336912b5b797a8b40c
+ development:
+   adapter: mysql2
+   encoding: utf8
+   reconnect: false
+   database: ticketing_system
+   pool: 5
+   host: localhost
+   username: root
+   password: password
